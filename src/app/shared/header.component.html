@@ -1,0 +1,53 @@
+<!-- Navebar Starts---------------------------------------------------- -->
+<nav #navbar class="navbar">
+    <div class="home-max-width">
+      <div class="home-logo">
+        <a href="#"><b>Cashew Bees</b></a>
+        <img
+          src="../../assets/images/bee-svg.png"
+          alt="Bee Image"
+          class="header-bee"
+        />
+      </div>
+      <!-- Slider menubar starts--------------------------------------------------  -->
+      <div class="slidermenu">
+        <div class="mobile-menu" *ngIf="isMobileView">
+          <button pButton class="p-button-text" (click)="toggleMobileMenu()">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div
+          class="home-one"
+          id="home"
+          [ngClass]="{
+            'menu-open': isMobileMenuOpen,
+            'menu-closed': !isMobileMenuOpen
+          }"
+        >
+          <button class="close-button" (click)="toggleMobileMenu()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#ourproducts">Our Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Slider menubar End--------------------------------------------------  -->
+      <div class="responsive">
+        <ul class="home-menu">
+          <li><a class="nav-link p-button-text" href="#home">Home</a></li>
+          <li><a class="nav-link p-button-text" href="#about">About</a></li>
+          <li>
+            <a class="nav-link p-button-text" href="#ourproducts">our Products</a>
+          </li>
+          <li><a class="nav-link p-button-text" href="#services">Services</a></li>
+          <li><a class="nav-link p-button-text" href="#team">Team</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,1062 @@
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    gap: 0;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.responsive-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Styling for the menu-bar */
+.menu-bar-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007ad9;
+    color: white;
+}
+
+.menu-bar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007ad9;
+    color: white;
+    position: relative;
+}
+
+/* Logo on the left */
+.logo {
+    width: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    flex: 1;
+}
+
+/* Style for the menu buttons */
+.menu-center button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.menu-center button:hover {
+    background-color: #000000;
+    color: #fff;
+    border-color: #007bff;
+    border-radius: 10px;
+}
+
+/* For the center menu items */
+.menu-center {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+/* For the right Login button */
+.menu-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    width: 100vw;
+}
+
+.background-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-card p,
+.background-card button {
+    z-index: 1;
+}
+
+.background-card .p-card-header {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.header-list {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+.aboutTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.about-list {
+    list-style-type: none;
+    padding-left: 0px;
+    font-size: 18px;
+}
+
+.about-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.about-list li i {
+    margin-right: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-bee {
+        width: 20px !important;
+    }
+
+    .p-col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about1 {
+        margin-left: 0px;
+    }
+
+    #portfolio .container .row .col-lg-4 {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+    }
+
+    #portfolio .container .row .col-lg-4 {
+        margin-left: 15px;
+    }
+
+    .menu-center {
+        display: none;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .bee-image {
+        width: 20px;
+        margin: 0 3px;
+    }
+
+    .p-col-12.p-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    ul#portfolio-flters li {
+        margin: 10px 5px;
+        padding: 8px 12px;
+    }
+
+    .home-one {
+        width: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        right: 0;
+        top: 38px !important;
+        overflow: hidden;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .home-one.menu-open {
+        width: 150px;
+        opacity: 0.8;
+    }
+
+    .home-one.menu-closed {
+        width: 0;
+    }
+
+    .home-one ul li {
+        text-transform: uppercase;
+        margin: 5px 0;
+    }
+
+    .home-one ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .home-one ul li a:hover {
+        color: rgb(3, 182, 236);
+    }
+
+    .mobile-menu button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    .close-button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .menu-mobile-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .menu-mobile-options.open {
+        display: block;
+    }
+
+    /* Mobile adjustments */
+    .background-card {
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .menu-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+    }
+
+    .grid-container img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/* Footer */
+.footer {
+    width: 100vw;
+    text-align: center;
+    padding: 20px;
+    background-color: #aacef2;
+}
+
+.footer p {
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bee-image {
+    width: 20px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.header-bee {
+    vertical-align: top;
+    width: 40px;
+    height: auto;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Navebar Starts---------------------------------------------------- */
+
+/* Navebar Header End------------------------------------------ */
+.navbar {
+    /* background: #2196f3; */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    /* transition: background-color 0.3s ease; */
+}
+
+.home-menu li {
+    list-style: none;
+}
+
+.home-max-width {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-menu li a {
+    text-transform: uppercase;
+    font-size: x-small;
+    padding: .17em;
+    color: white;
+}
+
+.home-menu li a:hover {
+    color: rgb(37, 86, 192);
+    transition: all 1s ease-in;
+}
+
+.home-logo {
+    padding: 5px 0px 5px 30px;
+}
+
+.home-logo a {
+    color: white;
+    font-size: x-large;
+}
+
+.home-logo a:hover {
+    color: rgb(20, 206, 219);
+    transition: all .5s ease-in;
+}
+
+.home-menu {
+    display: flex;
+    padding-right: 1em;
+}
+
+.responsive {
+    display: none;
+}
+
+.slidermenu {
+    margin-right: 30px;
+}
+
+ .carousel-inner {
+    position: relative;
+    overflow: hidden;
+}
+/* .carousel-item.active {
+    display: block;
+}  */
+
+.carousel-item img {
+    width: 100%;
+    height: auto;    
+    transition: transform 2s ease-in-out;
+} 
+.carousel-item img:hover {
+    transform: scale(1.25);
+  }
+.carousel-indicators li {
+    list-style: none;  
+  }
+.carousel-caption{
+    bottom: 35% !important;
+    font-size: 50px;
+}
+.carousel-item img:hover + .carousel-caption p {
+    font-size: 45px; /* Zoom in text */
+    transform: translateY(-10px)
+}
+.carousel-caption p {
+    font-size: 35px; /* Starting font size */
+    transform: translateY(0); /* Start below its normal position */
+    opacity: 1; /* Initially hidden */
+    transition: transform 2s ease-in-out, font-size 2s ease-in-out;
+}
+  
+/* Navebar Header End------------------------------------------ */
+
+/*  Navebar slide window For @medaia(Max-with:768px) Starts---------------------------- */
+
+.home-one {
+    width: 0px;
+    height: 50vh;
+    /* background-color: #2196f3; */
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    right: 0;
+    top: 30;
+    transition: all 1s ease-in;
+}
+
+.home-one ul li {
+    text-transform: uppercase;
+    list-style: none;
+    /* margin-left: 1.5rem;
+    margin-right: 1.5rem; */
+    margin: 5px 10px;
+}
+
+.home-one ul li a {
+    color: white;
+}
+
+.home-one ul li a:hover {
+    color: rgb(218, 96, 191);
+}
+
+.slider {
+    width: 125px;
+    transition: all 1s ease-in;
+}
+
+/*  Navebar slide window For @medaia(Max-with:768px) End---------------------------- */
+
+/* Navebar Header Image starts-------------------------------------------------------- */
+
+.slide-img {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.slide-inner {
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 30px;
+}
+
+.button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 2em;
+}
+
+button:hover {
+    border-color: white;
+    background: aqua;
+}
+
+.button a {
+    padding: .5em 1em;
+    color: white;
+}
+
+.button a:hover {
+    color: white;
+}
+
+.slide-inner p {
+    padding-bottom: 1em;
+}
+
+/* Navebar Header Image starts-------------------------------------------------------- */
+
+/* Responsive view  @media (min-768px) Starts-------------------------------------------------- */
+@media only screen and (min-width:768px) {
+    .responsive {
+        display: block;
+    }
+
+    .p-md-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .slidermenu {
+        display: none;
+    }
+
+    ul.slidermenu {
+        display: none;
+    }
+
+    .home-logo {
+        padding: 15px 0px 15px 15px;
+    }
+
+    .home-logo a {
+        font-size: xx-large;
+    }
+
+    .home-menu li a {
+        font-size: smaller;
+        padding: .5em;
+    }
+
+    /* Header inner content---------------------------- */
+    .slide-inner {
+        font-size: larger;
+        top: 30%;
+        left: 8.5%;
+    }
+
+    .button a {
+        font-size: larger;
+    }
+
+    .button {
+        padding: 1em;
+    }
+
+    .button a:hover {
+        text-shadow: 2px 2px 5px red;
+    }
+
+    .home-menu {
+        padding-right: 2em;
+    }
+}
+
+/* Responsive view  @media (min-768px) End-------------------------------------------------- */
+
+/* Responsive view  @media (min-1024px) Starts-------------------------------------------------- */
+@media only screen and (min-width:1024px) {
+    .home-logo {
+        padding: 15px 0px 15px 15px;
+    }
+
+    .home-logo a {
+        font-size: xxx-large;
+    }
+
+    .home-menu li a {
+        font-size: larger;
+        padding: .4em;
+    }
+
+    /* Header inner content---------------------------- */
+    .slide-inner {
+        top: 40%;
+    }
+
+    .button a {
+        font-size: larger;
+    }
+
+    .button {
+        padding: 1.1em;
+    }
+
+    .button a:hover {
+        text-shadow: 2px 2px 5px red;
+    }
+}
+
+/* Responsive view  @media (min-1024px) End-------------------------------------------------- */
+
+
+
+
+
+
+/* About Starts---------------------------------------------------- */
+
+/* About Grid-1 Starts---------------------------------------------------- */
+.about1 {
+    padding: 20px 10px 20px 30px;
+    opacity: 0.7;
+}
+
+.about1 p {
+    font-size: small;
+
+}
+
+.button2 {
+    padding: .5em;
+    border: 2px solid tomato;
+    border-radius: 5em;
+    background-color: aqua;
+
+}
+
+.button2 a {
+    padding: .5em;
+}
+
+button:hover {
+    color: rgb(11, 199, 52);
+    background-color: #00899a;
+}
+
+.button2 a:hover {
+    color: white;
+    text-shadow: 2px 2px 10px white;
+}
+
+/* About Grid-1 End---------------------------------------------------- */
+
+/* About Grid-2 Starts------------------------------------------------------------------------ */
+.about2 {
+    padding: 20px 30px;
+    opacity: 0.7;
+}
+
+.about-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Graph Creation------------------------------------------------ */
+.graph-container {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    color: white;
+    font-size: x-small;
+}
+
+.css3 {
+    width: 94%;
+    background-color: turquoise;
+}
+
+.html {
+    width: 100%;
+    background-color: turquoise;
+}
+
+.jqury {
+    width: 89%;
+    background-color: turquoise;
+}
+
+.mysql {
+    width: 79%;
+    background-color: turquoise;
+}
+
+.php {
+    width: 75%;
+    background-color: turquoise;
+}
+
+/* .about.us {
+    opacity: .8;
+} */
+/* Style for Portfolio Grid */
+/* Portfolio Grid Styling */
+#portfolio .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Space between items */
+    justify-content: center;
+}
+
+/* Make sure each image fits 100% width in mobile view */
+#portfolio .container .row .col-lg-4,
+#portfolio .container .row .col-md-6,
+#portfolio .container .row .col-sm-12 {
+    padding: 0;
+}
+
+/* Images will take full width in smaller screens */
+#portfolio .container .row .col-lg-4 {
+    flex: 1 1 30%;
+    /* 3 items per row in large screens */
+    max-width: 33.33%;
+    /* 3 items per row in desktop */
+}
+
+/* Ensuring images are responsive */
+#portfolio .container .row .col-lg-4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#portfolio .container .row>.col-lg-4:nth-child(3n+1) {
+    margin-left: 15px;
+    /* Add left margin to the first item in every row */
+}
+
+/* Portfolio Card Container */
+#portfolio .container .row .col-lg-4 {
+    flex: 1 1 30%;
+    max-width: 33.33%;
+    position: relative;
+    /* For positioning the label inside the card */
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+/* Image Styling */
+#portfolio .container .row .col-lg-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+/* Hover effect: scale and zoom the image */
+#portfolio .container .row .col-lg-4:hover img {
+    transform: scale(1.25);
+}
+
+/* Label Overlay */
+.image-container {
+    position: relative;
+    /* To position the label inside */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show label when hovered */
+#portfolio .container .row .col-lg-4:hover .image-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Make sure cards have a consistent look */
+.p-card {
+    margin-bottom: 20px;
+}
+
+/* Container for the filter buttons */
+ul#portfolio-flters {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+/* Individual filter items */
+ul#portfolio-flters li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    /* Add some padding for better clickability */
+    transition: all 0.3s ease;
+    /* Smooth transition on hover and active state */
+}
+
+/* Hover effect on filter items */
+ul#portfolio-flters li:hover {
+    color: #ff6f61;
+    border-bottom: 2px solid #ff6f61;
+    /* Add underline on hover */
+}
+
+/* Active filter item style */
+ul#portfolio-flters .filter-active {
+    color: #ff6f61;
+    border-bottom: 2px solid #ff6f61;
+    /* Underline the active filter */
+    font-weight: bold;
+    /* Ensure active filter is bold */
+}
+
+.about-img {
+    width: 100%;
+}
+
+/* Modal Styles */
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    margin: 5% auto;
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.preview-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.modal-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.modal-buttons button {
+    /* background-color: #ff6f61; */
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10%;
+}
+
+.modal-buttons button:hover {
+    background: transparent;
+    opacity: 0.7;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.services-head {
+    width: 100vw;
+}
+
+/* About Grid-2 End------------------------------------------------------------------------ */
+
+/* Responsive view  @media (min-768px) Starts-------------------------------------------------- */
+@media only screen and (min-width:768px) {
+
+    /* About Grid-1 Section---------------------------------------------------- */
+    .about.us {
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: space-evenly; */
+    }
+
+    .about1 {
+        margin-left: 50px;
+        padding: 20px 10px 20px 65px;
+        width: 50%;
+    }
+
+    .aboutTitle h3 {
+        font-size: xx-large;
+    }
+
+    .about1 h3 {
+        font-size: xx-large;
+    }
+
+    .about1 p {
+        font-size: large;
+    }
+
+    .button2 {
+        padding: 1em;
+    }
+
+    .button2 a {
+        font-size: medium;
+    }
+
+    /* About Grid-2 Section---------------------------------------------------- */
+    .about2 {
+        width: 40%;
+    }
+
+    .skills {
+        /* padding-top: 10px;
+            padding-bottom: 10px; */
+        font-size: larger;
+    }
+
+    .about2 h3 {
+        font-size: xx-large;
+    }
+
+    .about2 p {
+        padding: 10px 0px;
+        font-size: large;
+    }
+}
+
+/* Responsive view  @media (min-768px) End-------------------------------------------------- */
+
+/* Responsive view  @media (min-1024px) Starts-------------------------------------------------- */
+@media only screen and (min-width:1024px) {
+    .about1 {
+        padding: 20px 10px 20px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 12px;
+        /* Smaller text for very small screens */
+    }
+
+    .bee-image {
+        width: 16px;
+        /* Smaller image for very small screens */
+        margin: 0 2px;
+        /* Adjust spacing further */
+    }
+}
+
+.services-area {
+    padding: 50px 0;
+}
+
+.section-headline h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.service-card {
+    background: #f9f9f9;
+    height: 225px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Grid Layout */
+.row {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.3333%;
+        max-width: 32%;
+    }
+}
