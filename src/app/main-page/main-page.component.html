@@ -1,0 +1,270 @@
+<!-- Navebar Starts---------------------------------------------------- -->
+<nav #navbar class="navbar">
+  <div class="home-max-width">
+    <div class="home-logo">
+      <a href="#"><b>Cashew Bees</b></a>
+      <img
+        src="../../assets/images/bee-svg.png"
+        alt="Bee Image"
+        class="header-bee"
+      />
+    </div>
+    <!-- Slider menubar starts--------------------------------------------------  -->
+    <div class="slidermenu">
+      <div class="mobile-menu" *ngIf="isMobileView">
+        <button pButton class="p-button-text" (click)="toggleMobileMenu()">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+      <div
+        class="home-one"
+        id="home"
+        [ngClass]="{
+          'menu-open': isMobileMenuOpen,
+          'menu-closed': !isMobileMenuOpen
+        }"
+      >
+        <button class="close-button" (click)="toggleMobileMenu()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ourproducts">Our Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slider menubar End--------------------------------------------------  -->
+    <div class="responsive">
+      <ul class="home-menu">
+        <li><a class="nav-link p-button-text" href="#home">Home</a></li>
+        <li><a class="nav-link p-button-text" href="#about">About</a></li>
+        <li>
+          <a class="nav-link p-button-text" href="#ourproducts">our Products</a>
+        </li>
+        <li><a class="nav-link p-button-text" href="#services">Services</a></li>
+        <li><a class="nav-link p-button-text" href="#team">Team</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navebar Starts---------------------------------------------------- -->
+
+<!-- Grid Content -->
+<!-- <div class="grid-container">
+  <div class="grid-item">
+    <p-card
+      header="Welcome"
+      subheader="Get started with your site"
+      class="background-card"
+      [ngStyle]="{ 'background-image': 'url(assets/images/home-slide/cashew-slide-3.jpg)' }"
+    >
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button pButton label="Learn More" class="p-button-rounded"></button>
+    </p-card>
+  </div>
+  <div>
+    <h3></h3>
+  </div>
+</div> -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../../assets/images/home-slide/cashew-slide-1.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <!-- <h5>Our cashews are sourced from the best farms, ensuring premium quality in every bite.</h5> -->
+        <p><strong>Our cashews are sourced from the best farms, ensuring premium quality in every bite.</strong></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../../assets/images/home-slide/cashew-slide-2.jpg" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+        <!-- <h5>Experience the rich, natural flavor of our cashews, perfect for snacking or adding to your favorite dishes.</h5> -->
+        <p><strong>Xperience the rich, natural flavor of our cashews, perfect for snacking or adding to your favorite dishes.</strong></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../../assets/images/home-slide/cashew-slide-3.jpg" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+        <!-- <h5>Committed to freshness, we deliver cashews that are carefully processed and packed for your enjoyment.</h5> -->
+        <p><strong>Committed to freshness, we deliver cashews that are carefully processed and packed for your enjoyment.</strong></p>
+        <!-- <p><strong>        <p><strong>புத்துணர்ச்சிக்கு அர்ப்பணிப்புடன், கவனமாக பதப்படுத்தப்பட்ட மற்றும் உங்கள் மகிழ்ச்சிக்காக பேக் செய்யப்பட்ட முந்திரியை நாங்கள் வழங்குகிறோம்.</strong></p></strong></p> -->
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+<div class="aboutTitle">
+  <h3>About Cashew Bees</h3>
+</div>
+<!-- About Starts-------------------------------------------------------------- -->
+<section class="about us">
+  <!-- About Grid-1 Starts---------------------------------------------------- -->
+  <div class="about1">
+    <img
+      class="about-img"
+      src="../../assets/images/about-img.webp"
+      alt="about"
+    />
+  </div>
+  <!-- About Grid-1 End---------------------------------------------------- -->
+
+  <!-- About Grid-2 Starts---------------------------------------------------- -->
+  <div class="about2">
+    <p>
+      We specialize in producing high-quality cashew nuts and value-added cashew
+      products.
+    </p>
+    <br />
+    <p>Our offerings include:</p>
+    <ul class="about-list">
+      <li>
+        <span class="about-icon"><i class="bi bi-check-lg"></i></span><span>Cashew Kernels</span>
+      </li>
+      <li>
+        <span class="about-icon"><i class="bi bi-check-lg"></i></span><span>Cashew Shell</span>
+      </li>
+      <li>
+        <span class="about-icon"><i class="bi bi-check-lg"></i></span
+        ><span>Cashew Husk (Testa)</span>
+      </li>
+    </ul>
+    <br />
+    <p>
+      We are committed to delivering exceptional products and ensuring the
+      highest standards of quality in every aspect of our business.
+    </p>
+    <!-- <p>Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus.
+        Fusce id mi diam, non ornare. 
+        Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu.</p> -->
+  </div>
+  <!-- About Grid-2 End---------------------------------------------------- -->
+</section>
+<!-- About End---------------------------------------------------- -->
+<div id="portfolio" class="portfolio-area area-padding fix">
+  <div class="container">
+    <!-- Section heading -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Our Products</h2>
+      </div>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="row wesome-project-1 fix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <ul id="portfolio-flters" class="list-inline text-center">
+          <li
+            class="list-inline-item"
+            [class.filter-active]="selectedFilter === '*'"
+            (click)="filterCards('*')"
+          >
+            All
+          </li>
+          <li
+            class="list-inline-item"
+            [class.filter-active]="selectedFilter === 'kernals'"
+            (click)="filterCards('kernals')"
+          >
+            Kernal
+          </li>
+          <li
+            class="list-inline-item"
+            [class.filter-active]="selectedFilter === 'shell'"
+            (click)="filterCards('shell')"
+          >
+            Nut Shell
+          </li>
+          <li
+            class="list-inline-item"
+            [class.filter-active]="selectedFilter === 'husk'"
+            (click)="filterCards('husk')"
+          >
+            Testa
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12"
+        *ngFor="let card of filteredCards; let i = index"
+      >
+        <p-card>
+          <ng-template pTemplate="content">
+            <!-- <div class="image-container" (click)="openPreviewModal(i)"> -->
+            <div class="image-container" (click)="navigateToPage(card.category)">
+              <img [src]="card.image" alt="Card image" class="img-fluid" />
+              <div class="image-overlay">{{ card.category }}</div>
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closePreviewModal()">×</span>
+    <div class="modal-body">
+      <img
+        [src]="selectedImage?.image"
+        alt="Preview Image"
+        class="preview-image"
+      />
+      <div class="modal-buttons">
+        <button (click)="changeImage('prev')">&lt;</button>
+        <button (click)="changeImage('next')">&gt;</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ======= Services Section ======= -->
+<div class="services-area area-padding">
+  <div class="container">
+    <div class="section-headline services-head text-center">
+      <h2>Our Services</h2>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4" *ngFor="let service of services">
+        <div class="service-card">
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <h4>{{ service.title }}</h4>
+          <p>{{ service.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <!-- <p>© Copyright Cashew Bees. All Rights Reserved.</p> -->
+  <p>
+    <span>© Copyright Cashew Bees</span>
+    <img
+      src="../../assets/images/bee-svg.png"
+      alt="Bee Image"
+      class="bee-image"
+    />
+    <span>All Rights Reserved.</span>
+  </p>
+</footer>
