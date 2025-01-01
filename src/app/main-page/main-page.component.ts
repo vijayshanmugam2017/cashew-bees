@@ -18,6 +18,9 @@ export class MainPageComponent implements OnInit {
   isMobileView: boolean = false;
   isMobileMenuOpen: boolean = false;
   @ViewChild('navbar', { static: true }) navbar!: ElementRef;
+  @ViewChild('aboutSection') aboutSection: ElementRef | undefined;
+  @ViewChild('productsSection') productsSection: ElementRef | undefined;
+
   private scrollListener!: () => void;
   selectedFilter: string = 'all';
   // State for modal

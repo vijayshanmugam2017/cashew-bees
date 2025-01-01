@@ -685,6 +685,7 @@ button:hover {
 .html {
     width: 100%;
     background-color: turquoise;
+    scroll-behavior: smooth;
 }
 
 .jqury {
