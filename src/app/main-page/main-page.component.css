@@ -294,6 +294,34 @@
         width: 100%;
         object-fit: cover;
     }
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 1.5s ease-in-out !important;
+    }
+
+    .carousel-item img:hover {
+        transform: scale(1.15) !important;
+    }
+
+    .carousel-caption {
+        bottom: 20% !important;
+        font-size: 30px !important;
+        padding: 10px !important;
+    }
+
+    .carousel-caption p {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        transition: transform 1.5s ease-in-out, font-size 1.5s ease-in-out !important;
+    }
+
+    .carousel-item img:hover + .carousel-caption p {
+        font-size: 25px !important;
+        transform: translateY(-5px) !important;
+    }
 }
 
 
@@ -424,15 +452,15 @@
     list-style: none;  
   }
 .carousel-caption{
-    bottom: 35% !important;
+    bottom: 35%;
     font-size: 50px;
 }
 .carousel-item img:hover + .carousel-caption p {
-    font-size: 45px; /* Zoom in text */
+    font-size: 35px; /* Zoom in text */
     transform: translateY(-10px)
 }
 .carousel-caption p {
-    font-size: 35px; /* Starting font size */
+    font-size: 25px; /* Starting font size */
     transform: translateY(0); /* Start below its normal position */
     opacity: 1; /* Initially hidden */
     transition: transform 2s ease-in-out, font-size 2s ease-in-out;
