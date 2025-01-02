@@ -1,0 +1,19 @@
+/* Hide the scrollbar but allow scrolling */
+html, body {
+    height: 100%; /* Ensure full height for the document */
+    margin: 0;
+    overflow: hidden; /* Hide the main scrollbar */
+  }
+  
+  /* Create a scrollable area */
+  .app-container {
+    height: 100%; /* Full height of the window */
+    overflow-y: hidden; /* Enable vertical scrolling */
+    padding-right: 15px; /* Optional: Adds padding to avoid content overlapping with the scrollbar */
+  }
+  
+  /* Optional: If you want to hide horizontal scrollbar */
+  .app-container {
+    overflow-x: hidden;
+  }
+  

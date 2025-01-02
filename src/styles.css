@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset margin and padding for the entire document */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent box model */
+  }
+  
+  /* Reset for all elements */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /* Inherit box-sizing from the body */
+  }
+  
+  /* Ensure no extra space around root Angular element */
+  app-root {
+    display: block; /* Default is inline, set to block for consistent layout */
+    width: 100%;
+    height: 100%;
+  }
+  
