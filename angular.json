@@ -14,7 +14,7 @@
           "options": {
             "outputPath": "dist/cashew-bees",
             "index": "src/index.html",
-            "main": "src/main.ts",  
+            "main": "src/main.ts",  // Keep this for the main entry point of the browser app
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/assets"],
