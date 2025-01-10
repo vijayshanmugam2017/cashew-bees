@@ -1,3 +1,5 @@
+# cashew-bees
+"This website has been created to promote our cashew business and showcase our commitment to quality and excellence."
 # CashewBees
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
