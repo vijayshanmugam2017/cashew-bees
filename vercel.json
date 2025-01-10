@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "dist/cashew-bees/*",
+      "src": "dist/cashew-bees",
       "use": "@vercel/static"
     }
   ],
