@@ -1,22 +1,15 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "dist/cashew-bees",
+      "src": "dist/**/*",
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [
-    { 
-      "source": "/(.*)", 
-      "destination": "/index.html" 
-    },
-    { 
-      "source": "/feedback/((?!general).*)", 
-      "destination": "/api/feedback/general" 
-    },
-    { 
-      "source": "/feedback/:id", 
-      "destination": "/api/feedback/:id" 
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/cashew-bees/$1"
     }
   ]
 }
