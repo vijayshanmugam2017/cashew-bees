@@ -1,4 +1,5 @@
 {
+"outputDirectory": "dist/cashew-bees",
   "cleanUrls": true,
   "rewrites": [
     {
