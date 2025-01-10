@@ -1,6 +1,10 @@
 {
-"outputDirectory": "dist/cashew-bees",
-  "cleanUrls": true,
+  "builds": [
+    {
+      "src": "dist/cashew-bees/**",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
