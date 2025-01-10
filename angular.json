@@ -11,21 +11,23 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-              "outputPath": "dist/cashew-bees",
-              "index": "src/index.html",
-              "main": "src/main.ts",
-              "polyfills": ["zone.js"],
-              "tsConfig": "tsconfig.app.json",
-              "assets": ["src/assets"],
-              "styles": [
-                "node_modules/primeicons/primeicons.css",
-                "node_modules/primeflex/primeflex.css",
-                "src/styles.css"
-              ],
-              "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
-            }
+            "outputPath": "dist/cashew-bees",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/assets"],
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
+          },
           "configurations": {
             "production": {
               "budgets": [
@@ -36,7 +38,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2okB",
+                  "maximumWarning": "2kB",
                   "maximumError": "30kB"
                 }
               ],
@@ -51,17 +53,16 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "options": {
-            "liveReload": true,
-            "poll": 1000
-          },
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "cashew-bees:build"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "cashew-bees:build:production"
+              "browserTarget": "cashew-bees:build:production"
             },
             "development": {
-              "buildTarget": "cashew-bees:build:development"
+              "browserTarget": "cashew-bees:build:development"
             }
           },
           "defaultConfiguration": "development"
