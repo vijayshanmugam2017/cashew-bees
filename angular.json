@@ -5,7 +5,6 @@
   "projects": {
     "cashew-bees": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -15,7 +14,7 @@
           "options": {
             "outputPath": "dist/cashew-bees",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",  
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/assets"],
@@ -24,12 +23,7 @@
               "node_modules/primeflex/primeflex.css",
               "src/styles.css"
             ],
-            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
