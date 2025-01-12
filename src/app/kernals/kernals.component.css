@@ -1,0 +1,117 @@
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-container,
+.text-container {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.text-container-left{
+    margin-left: 100px;
+}
+.text-container-right{
+    margin-right: 100px;
+}
+.image-left img {
+    /* width: 100%;
+    height: auto;
+    display: block; */
+    margin-left: 30px;
+    width: 85%;
+    height: 500px;
+    display: block;
+}
+.image-right img {
+    /* width: 100%;
+    height: auto;
+    display: block; */
+    margin-left: 75px;
+    width: 85%;
+    height: 500px;
+    display: block;
+}
+
+.kernal-detsils {
+    opacity: 0.7;
+    font-size: large;
+    margin: 50px 100px;
+}
+
+.kernal-img {
+    margin: 0px 15px 50px;
+}
+
+/* Media query for responsive scaling */
+@media (max-width: 768px) {
+
+    /* .image-container,
+    .text-container {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .text-container {
+        font-size: smaller;
+        margin: 0px 10px 0px 15px;
+    }
+    .text-container h2{
+        font-size: large;
+    }
+    .image-right img {
+        margin-left: 0px;
+        height: 300px !important;
+    }
+    .card-content {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .kernal-detsils {
+        font-size: medium;
+        margin: 15px 50px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    } */
+    .card-content {
+        flex-wrap: wrap; /* Allow stacking */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align the items */
+    }
+
+    .image-container,
+    .text-container {
+        flex: 1 1 100%; /* Full width for each item */
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 0.5rem; /* Adjust padding for smaller layout */
+    }
+
+    .text-container {
+        font-size: smaller;
+        margin: 10px 0; /* Reduce margins for better spacing */
+        text-align: center; /* Center-align text for better readability */
+    }
+
+    .text-container h2 {
+        font-size: large;
+    }
+
+    .image-container img {
+        margin: 0 auto; /* Center the image */
+        width: 85%; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .kernal-detsils {
+        font-size: medium;
+        margin: 15px 10px; /* Adjust margin for smaller screens */
+    }
+
+}
