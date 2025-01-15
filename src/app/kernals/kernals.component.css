@@ -53,43 +53,38 @@
 .benifit {
     list-style-type: none;
 }
-.header{
+
+.header {
     opacity: 0.9;
 }
+
+ul {
+    padding-left: 20px;
+    /* Space for bullet points */
+    list-style-position: inside;
+    /* Align bullet points with text */
+    margin: 0;
+    /* Remove default margins */
+}
+
+li {
+    text-align: left;
+    /* Ensure text is aligned to the left */
+    line-height: 1.5;
+    /* Improve readability with proper line height */
+}
+
+/* Specific styles for .benifit */
+.benifit ul {
+    padding-left: 20px;
+    /* Align bullets for nested lists */
+    margin: 0;
+    /* Remove extra margins */
+}
+
 /* Media query for responsive scaling */
 @media (max-width: 768px) {
 
-    /* .image-container,
-    .text-container {
-        flex: 1 1 50%;
-        max-width: 50%;
-    }
-    .text-container {
-        font-size: smaller;
-        margin: 0px 10px 0px 15px;
-    }
-    .text-container h2{
-        font-size: large;
-    }
-    .image-right img {
-        margin-left: 0px;
-        height: 300px !important;
-    }
-    .card-content {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
-    .kernal-detsils {
-        font-size: medium;
-        margin: 15px 50px;
-    }
-
-    .image-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-    } */
     .card-content {
         flex-wrap: wrap;
         /* Allow stacking */
@@ -97,6 +92,15 @@
         /* Stack items vertically */
         align-items: center;
         /* Center align the items */
+    }
+
+    ul {
+        padding-left: 30px;
+        /* Adjust for smaller screens */
+    }
+
+    .kernal-content {
+        margin: 15px;
     }
 
     .image-container,
@@ -116,9 +120,11 @@
         text-align: center;
         /* Center-align text for better readability */
     }
-    .header{
+
+    .header {
         font-size: medium !important;
     }
+
     .text-container h2 {
         font-size: large;
     }
