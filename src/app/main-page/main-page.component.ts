@@ -69,6 +69,7 @@ responsiveOptions: CarouselResponsiveOptions[]|undefined;
 
   ngOnInit() {
     // Ensure window is available before adding event listeners
+    this.autoPlayVideo();
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', () => this.checkMobileView());
     }
@@ -161,6 +162,20 @@ responsiveOptions: CarouselResponsiveOptions[]|undefined;
     const message = encodeURIComponent("I need a quote");
     const whatsappUrl = `https://wa.me/8667220431?text=${message}`; // Replace '1234567890' with your WhatsApp number.
     window.open(whatsappUrl, '_blank');
+  }
+
+  autoPlayVideo(): void {
+    const video = document.querySelector('.background-video') as HTMLVideoElement;
+
+    if (video) {
+      // Ensure video is muted for autoplay to work on all platforms
+      video.muted = true;
+
+      // Attempt to play the video programmatically
+      video.play().catch((error) => {
+        console.error('Autoplay failed:', error);
+      });
+    }
   }
 
   ngOnDestroy() {
