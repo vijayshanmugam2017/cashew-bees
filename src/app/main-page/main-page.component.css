@@ -142,6 +142,60 @@
     margin-right: 10px;
 }
 
+.video-container {
+    position: relative;
+    margin-left: 7px;
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    /* Default height for desktops */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Prevent interaction with the video */
+}
+
+.get-quote-button {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 12px 24px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.get-quote-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #3498db; /* Change to your desired hover background color */
+    color: #ffffff; /* Change to your desired hover text color */
+}
+
+.get-quote-button:active {
+    transform: scale(0.95);
+}
+
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .menu-bar {
@@ -294,6 +348,7 @@
         width: 100%;
         object-fit: cover;
     }
+
     .carousel-item img {
         width: 100%;
         height: auto;
@@ -318,10 +373,27 @@
         transition: transform 1.5s ease-in-out, font-size 1.5s ease-in-out !important;
     }
 
-    .carousel-item img:hover + .carousel-caption p {
+    .carousel-item img:hover+.carousel-caption p {
         font-size: 25px !important;
         transform: translateY(-5px) !important;
     }
+
+    .video-container {
+        height: 200px;
+        /* Adjust height for smaller screens */
+    }
+
+    /* .get-quote-button {
+        font-size: 14px;
+        padding: 6px 14px;
+        right: 20%;
+    } */
+    .get-quote-button {
+        font-size: 10px; /* Reduce the font size for mobile */
+        padding: 6px 12px; /* Smaller padding for a compact button */
+        /* right: 20%;  */
+        border-radius: 3px; /* Reduce border-radius for a smaller button look */
+      }
 }
 
 
@@ -432,40 +504,50 @@
     margin-right: 30px;
 }
 
- .carousel-inner {
+.carousel-inner {
     position: relative;
     overflow: hidden;
 }
+
 /* .carousel-item.active {
     display: block;
 }  */
 
 .carousel-item img {
     width: 100%;
-    height: auto;    
+    height: auto;
     transition: transform 2s ease-in-out;
-} 
+}
+
 .carousel-item img:hover {
     transform: scale(1.25);
-  }
+}
+
 .carousel-indicators li {
-    list-style: none;  
-  }
-.carousel-caption{
+    list-style: none;
+}
+
+.carousel-caption {
     bottom: 35%;
     font-size: 50px;
 }
-.carousel-item img:hover + .carousel-caption p {
-    font-size: 35px; /* Zoom in text */
+
+.carousel-item img:hover+.carousel-caption p {
+    font-size: 35px;
+    /* Zoom in text */
     transform: translateY(-10px)
 }
+
 .carousel-caption p {
-    font-size: 25px; /* Starting font size */
-    transform: translateY(0); /* Start below its normal position */
-    opacity: 1; /* Initially hidden */
+    font-size: 25px;
+    /* Starting font size */
+    transform: translateY(0);
+    /* Start below its normal position */
+    opacity: 1;
+    /* Initially hidden */
     transition: transform 2s ease-in-out, font-size 2s ease-in-out;
 }
-  
+
 /* Navebar Header End------------------------------------------ */
 
 /*  Navebar slide window For @medaia(Max-with:768px) Starts---------------------------- */
