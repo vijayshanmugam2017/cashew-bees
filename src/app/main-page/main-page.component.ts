@@ -157,6 +157,12 @@ responsiveOptions: CarouselResponsiveOptions[]|undefined;
     }
   }
 
+  redirectToWhatsApp() {
+    const message = encodeURIComponent("I need a quote");
+    const whatsappUrl = `https://wa.me/8667220431?text=${message}`; // Replace '1234567890' with your WhatsApp number.
+    window.open(whatsappUrl, '_blank');
+  }
+
   ngOnDestroy() {
     // Unsubscribe from the scroll event listener
     if (this.scrollListener) {
