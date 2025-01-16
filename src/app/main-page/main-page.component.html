@@ -181,10 +181,17 @@
   </div>
 </div>
 <div class="video-container">
-  <video autoplay muted loop playsinline class="background-video">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="background-video"
+    aria-label="Background Video"
+  >
     <source src="assets/videos/Cashew-nuts.mp4" type="video/mp4" />
     Your browser does not support the video tag.
-  </video>  
+  </video>
   <button
     class="get-quote-button"
     (click)="redirectToWhatsApp()"
@@ -193,6 +200,7 @@
     Get Quote
   </button>
 </div>
+
 
 <!-- Footer -->
 <!-- <footer class="footer">
